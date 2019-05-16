@@ -53,13 +53,16 @@ class DataHanger{//a processor
     }
   }
   endItem(){
+    if (this.context.getAttribute('data-initialdisplay'))
+      this.clonedContext.style.display = this.context.getAttribute('data-initialdisplay');
     this.hang.appendChild(this.clonedContext);
   }
   preProcessField(key,value,item,targetNode,contextNode,namespace){
     return value;
   }
   finalize(){
-
+    this.context.setAttribute('data-initialdisplay',this.context.style.display);
+    this.context.display = none;
   }
 }
 class Map{
