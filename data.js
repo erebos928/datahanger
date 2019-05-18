@@ -1,4 +1,5 @@
-var data = [{"id":1,"first_name":"Tommy","last_name":"Calley","email":"tcalley0@ycombinator.com","gender":"Male","ip_address":"129.191.104.219","phone":"310-495-8638"},
+var data = [
+{"id":1,"first_name":"Tommy","last_name":"Calley","email":"tcalley0@ycombinator.com","gender":"Male","ip_address":"129.191.104.219","phone":"310-495-8638"},
 {"id":2,"first_name":"Vernice","last_name":"Toye","email":"vtoye1@dropbox.com","gender":"Female","ip_address":"90.115.205.60","phone":"906-808-1682"},
 {"id":3,"first_name":"Cam","last_name":"Iron","email":"ciron2@cisco.com","gender":"Female","ip_address":null,"phone":"614-548-8141"},
 {"id":4,"first_name":"Nial","last_name":"Seeds","email":"nseeds3@timesonline.co.uk","gender":"Male","ip_address":null,"phone":"793-345-9172"},

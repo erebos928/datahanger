@@ -58,11 +58,15 @@ class DataHanger{//a processor
     this.hang.appendChild(this.clonedContext);
   }
   preProcessField(key,value,item,targetNode,contextNode,namespace){
-    return value;
+    let func = this.map.getFn(key);
+    if (func)
+      return func(key,value,item,targetNode,contextNode,namespace);
+    else
+      return value;
   }
   finalize(){
     this.context.setAttribute('data-initialdisplay',this.context.style.display);
-    this.context.display = none;
+    this.context.style.display = 'none';
   }
 }
 class Map{
@@ -102,8 +106,8 @@ class Map{
       return null;
   }
   getFn(key){//supplementary process function
-    if (this.mapping[key])
-      return this.mapping[key];
+    if (this.mapping[key].fn)
+      return this.mapping[key].fn;
     else
       return null;
   }

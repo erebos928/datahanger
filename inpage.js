@@ -1,13 +1,13 @@
 let map13 = [
 //{"prefunc":fn},//the function to be called on each item, useful for generate row related function, params: index,item,contextNode
-{"field":"Email","node":"//*[@id='email']","operation":"INSERT"},
-{"field":"integralIndex","node":"//*[@id='phone']","operation":"INSERT"},
-{"field":"FkTblUserRole","node":"//*[@id='role']","operation":"INSERT"},
-{"field":"Password","node":"//*[@id='pass']","operation":"INSERT"},
-{"field":"UserName","node":"//*[@id='uname']","operation":"INSERT"},
-{"field":"_index","node":"//*[@id='fname']","operation":"INSERT"},
-{"field":"FirstName","node":"//*[@id='fname']","operation":"APPEND"},
-{"field":"LastName","node":"//*[@id='fname']","operation":"APPEND"}
+{"field":"email","node":"//*[@id='email']","operation":"INSERT"},
+//{"field":"id","node":"//*[@id='phone']","operation":"INSERT"},
+{"field":"gender","node":"//*[@id='gender']","operation":"INSERT"},
+{"field":"ip_address","node":"//*[@id='ip']","operation":"INSERT"},
+{"field":"phone","node":"//*[@id='phone']","operation":"INSERT"},
+{"field":"_index","node":"//*[@id='radif']","operation":"INSERT"},
+{"field":"first_name","node":"//*[@id='fname']","operation":"INSERT"},
+{"field":"last_name","node":"//*[@id='lname']","operation":"INSERT"}
 ];
 let gp13 = [
   {"prefunc":applyEvent},
@@ -26,7 +26,7 @@ if (timer)
   clearTimeout(timer);
 timer = setTimeout(function(){
     startSearch();
-  },2000);
+  },200);
 }
 function keyPressHolder(keyPressCount){
   let res = function(){
@@ -64,11 +64,9 @@ function generateGrouper(len,offset){
 const groupSize = 10;
 var dataSource;
 function initialConstruct(){
-ServerResult().then(function(data){
   dataSource = data;
 fire(firstFive(data),"//*[@id='branch']",map13,"pechenicolet.user");
-fire(regroup(data,groupSize),"//*[@id='ppp']",gp13,"pch.user.gr");//regroup generates an array based on data array in which there are item with offset field
-});
+//fire(regroup(data,groupSize),"//*[@id='ppp']",gp13,"pch.user.gr");//regroup generates an array based on data array in which there are item with offset field
 }
 function regroup(data,size){
   var count = data.length / size;
