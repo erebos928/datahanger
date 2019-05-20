@@ -43,7 +43,7 @@ class SimpleProcessor{
 
   }
   fieldSeen(name,value,item,ns){
-    console.log(name + "------" + value);
+    //console.log(name + "------" + value);
   }
   endItem(){
 
