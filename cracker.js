@@ -12,7 +12,7 @@ class Cracker{//a subscriber
     });
   }
   beforeItem(index){
-    console.log(index + " ");
+    //console.log(index + " ");
   }
   nextItem(item,idx){
     item._index = idx;
@@ -27,7 +27,7 @@ class Cracker{//a subscriber
     });
   }
   afterItem(index){
-    console.log("email printed")
+    //console.log("email printed")
   }
   endData(){
     this.processors.forEach(function(processor){

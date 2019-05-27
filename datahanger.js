@@ -65,6 +65,7 @@ class DataHanger{//a processor
       return value;
   }
   finalize(){
+if (!this.context.getAttribute('data-initialdisplay'))
     this.context.setAttribute('data-initialdisplay', window.getComputedStyle(this.context,null).getPropertyValue('display'));
     this.context.style.display = 'none';
   }

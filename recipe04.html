@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="data.js"></script>
+  <script src="cracker.js"></script>
+  <script src="core.js"></script>
+  <script src="datahanger.js"></script>
+  <script src="recipe04.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  .table>thead>tr>th {
+    border-bottom: 1px solid #84061d;
+  }
+  .pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+  </style>
+</head>
+<body>
+
+<div class="container">
+<button onclick="sortData()">Sort</button>
+<div class="pagination">
+  <a href="#">&laquo;</a>
+<div style="display:inline">
+  <span id="grouping" style="cursor:pointer">1</span>
+</div>
+  <a href="#">&raquo;</a>
+</div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>IP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="branch">
+        <td id="radif">john@example.com</td>
+        <td id="fname">John</td>
+        <td id="lname">Doe</td>
+        <td id="gender">Doe</td>
+        <td id="email">john@example.com</td>
+        <td id="phone">john@example.com</td>
+        <td id="ip">john@example.com</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+<script>
+initialConstruct();
+</script>
+</html>
